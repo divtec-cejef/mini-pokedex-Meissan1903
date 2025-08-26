@@ -64,7 +64,7 @@ function displayPokemons() {
     for (let i = 0; i < pokemons.length; i++) {
         const pokemon = pokemons[i];
 
-        container.innerHTML += `<p>${pokemon.name}</p>`;
+        container.innerHTML += `<p>${pokemon.name} <small>${pokemon.type}</small></p>`;
     }
 }
 
