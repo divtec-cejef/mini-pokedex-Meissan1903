@@ -1,7 +1,7 @@
 /**
  * Exercice : Mini Pokédex
- * @author Steve Fallet <steve.fallet@dvitec.ch>
- * @since 2024-09-01
+ * @author Meïssan Rua Gomez <meissan.ruaagomez@divtec.ch>
+ * @since 2025-08-26
  */
 
 'use strict';
@@ -47,3 +47,25 @@ const pokemons = [
     { name: 'Ronflex', type: 'Normal', level: 45, img: 'ronflex.png' },
     { name: 'Mewtwo', type: 'Psy', level: 70, img: 'mewtwo.png' }
 ];
+
+/**
+ * Affiche la liste des Pokémon dans le conteneur
+ */
+function displayPokemons() {
+
+    const container = document.querySelector('.pokemon-container');
+    container.innerHTML = '';
+
+    if (pokemons.length === 0) {
+        container.innerHTML = `<p>Dracaufeu a tout brûlé, aucun Pokémon ne correspond à ta recherche !</p>`;
+        return;
+    }
+
+    for (let i = 0; i < pokemons.length; i++) {
+        const pokemon = pokemons[i];
+
+        container.innerHTML += `<p>${pokemon.name}</p>`;
+    }
+}
+
+displayPokemons();
